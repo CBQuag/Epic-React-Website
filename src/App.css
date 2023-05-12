@@ -5,6 +5,51 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@keyframes oscillate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(200px) rotate(20deg) scale(80%);
+  
+  }
+  100% {
+    transform: translateY(0) rotate(-20deg) scale(150%);
+  }
+}
+@keyframes hostile{
+  0%{
+    background-color: #000000;
+  }
+  100%{
+    background-color: white;
+  }
+}
+@keyframes altoscillate {
+  0% {
+    transform: translateX(-100px);
+    background-color: #f41ef8;
+  }
+  30%{
+    background-color: #c1d7ff;
+  }
+  31%{
+    background-color: #000000;
+  }
+  32%{
+    background-color: #2fff0f;
+  }
+  50% {
+    transform: translateX(200px) rotate(200deg) scale(80%);
+    background-color: #ff0000;
+  
+  }
+  100% {
+    transform: translateX(-100px) rotate(-200deg) scale(120%);
+    background-color: #d518ff;
+  }
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -13,14 +58,19 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
-
+body{
+  animation: hostile infinite 0.1s;
+}
 .App-header {
+  animation: oscillate 1s infinite;
+  
+  animation-direction: alternate;
   background-color: #282c34;
   display: flex;
-  max-height: 22vh;
+  height: 19vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -28,16 +78,33 @@
   color: white;
 }
 #main-content{
+  animation: altoscillate infinite 6s ;
+  animation-direction: alternate;
   height: 78vh;
-  background-color: #c1d7ff;
-}
-#interest-list{
+  /* background-color: #c1d7ff; */
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   
 }
+#interests{
+  animation: oscillate 1s ease-in-out infinite;
+  animation: App-logo-spin infinite 3s ;
+  animation-direction: alternate;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 300px;
+}
+.interest-box{
+  animation: App-logo-spin infinite 2s ;
+  animation-direction: alternate;
+}
+#foot{
+  animation: hostile 1s;
+  min-height:3vh
+}
+
 
 .App-link {
   color: #61dafb;
