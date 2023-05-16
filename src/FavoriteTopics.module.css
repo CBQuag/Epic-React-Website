@@ -1,0 +1,11 @@
+    
+ .interestBox{
+    display:          flex;
+    flex-direction:    row;
+    /* fontWeight:       props.difficulty > 2 ? "bold"   : null;
+    backgroundColor:  props.difficulty > 2 ? "white" : 'blue';
+    color:            props.difficulty>2?'black':'white'; */ 
+    height:           100px;
+    width:            100px;
+    margin:           20px;
+ }

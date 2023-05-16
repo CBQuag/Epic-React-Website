@@ -8,18 +8,39 @@
 @keyframes oscillate {
   0% {
     transform: translateY(0);
+    color: #c1d7ff;
+  }
+  10%{
+    color: #282c34;
+  }
+  30%{
+    color: aqua;
   }
   50% {
-    transform: translateY(200px) rotate(20deg) scale(80%);
+    transform: translateY(200px) rotate(20deg) scale(80%) skewX(80deg) ;
+    color: #2fff0f;
   
+  }
+  65%{
+    color: #d518ff;
+  }
+  80%{
+    color: aqua;
   }
   100% {
     transform: translateY(0) rotate(-20deg) scale(150%);
+    color: #ff0000;
   }
 }
 @keyframes hostile{
   0%{
     background-color: #000000;
+  }
+  33%{
+    background-color: rgb(248, 255, 226);
+  }
+  66%{
+    background-color: rgb(43, 0, 57);
   }
   100%{
     background-color: white;
@@ -40,7 +61,7 @@
     background-color: #2fff0f;
   }
   50% {
-    transform: translateX(200px) rotate(200deg) scale(80%);
+    transform: translateX(200px) rotate(200deg) scale(5%) skewX(-360deg) skewY(36deg);
     background-color: #ff0000;
   
   }
@@ -75,13 +96,12 @@ body{
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 #main-content{
+  border-radius: 50%;
   animation: altoscillate infinite 6s ;
   animation-direction: alternate;
   height: 78vh;
-  /* background-color: #c1d7ff; */
   display: flex;
   justify-content: center;
   
@@ -97,11 +117,13 @@ body{
   width: 300px;
 }
 .interest-box{
+  border-radius: 50px;
   animation: App-logo-spin infinite 2s ;
   animation-direction: alternate;
 }
 #foot{
-  animation: hostile 1s;
+  animation: oscillate  infinite 1s;
+  animation-direction: reverse;
   min-height:3vh
 }
 
@@ -112,9 +134,9 @@ body{
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg)   scale(10%)  translateX(-100px) translateY(-100px) skewX(20deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(300%) translateX(100px)  translateY(100px)  skewY(30deg);
   }
 }
